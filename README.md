@@ -1,8 +1,8 @@
-# Web Development Project 1 - **
+# Web Development Project 2 - *Flashcard (part1)*
 
 Submitted by: **Wei Hong Lin**
 
-This web app: **Modern Jewelry Shop**
+This web app: **Flashcard**
 
 Time spent: **6** hours spent in total
 
@@ -10,20 +10,27 @@ Time spent: **6** hours spent in total
 
 The following **required** functionality is completed:
 
-- [X] **The app has a cohesive, unique theme for events or resources relevant to a specific community**
-  - [X] Header/title describing the theme is displayed
-- [X] **At least 10 unique events or resources are displayed in a responsive card format**
-  - [X] There are at least 10 cards displayed 
-  - [X] The cards should be displayed in an organized format (ex. a grid, or in one line)
-  - [X] Each card should include some information about the event or resource
-
+- [X] **The app displays the title of the card set, a short description, and the total number of cards**
+  - [X] Title of card set is displayed
+  - [X] A short description of the card set is displayed
+  - [X] A list of card pairs is created
+  - [X] The total number of cards in the set is displayed
+  - [X] Card set is represented as a list of card pairs (an array of dictionaries where each dictionary contains the question and answer is perfectly fine)
+- [X] **A single card at a time is displayed**
+  - [X] Only one half of the information pair is displayed at a time
+- [X] **Clicking on the card flips the card over, showing the corresponding component of the information pair**
+  - [X] Clicking on a card flips it over, showing the back with corresponding information
+  - [X] Clicking on a flipped card again flips it back, showing the front
+- [X] **Clicking on the next button displays a random new card**
 
 The following **optional** features are implemented:
 
-- [X] Buttons or links to a related resources are on each card component
-  - [X] All cards have buttons or links in addition to text
-- [X] The site is responsive for both desktop and mobile formats
-  - [ ] Web app is shown in a mobile format
+- [X] Cards contain images in addition to or in place of text
+  - [X] Some or all cards have images in place of or in addition to text
+- [ ] Cards have different visual styles such as color based on their category
+  - Example categories you can use:
+    - Difficulty: Easy/medium/hard
+    - Subject: Biology/Chemistry/Physics/Earth science
 
 The following **additional** features are implemented:
 
@@ -33,11 +40,10 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<!-- <img src='https://www.youtube.com/watch?v=3cTLomSWQ2w' title='Video Walkthrough' width='' alt='Video Walkthrough' /> -->
-https://www.youtube.com/watch?v=3cTLomSWQ2w
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with giphy
+GIF created with ...  
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -46,11 +52,10 @@ GIF created with giphy
 ## Notes
 
 Describe any challenges encountered while building the app.
-Take some time to be familiar with the use of card
 
 ## License
 
-    Copyright [Wei Hong Lin] [name of copyright owner]
+    Copyright [yyyy] [name of copyright owner]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
