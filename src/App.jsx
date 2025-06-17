@@ -1,7 +1,7 @@
 import "./styles.css";
 import "./customStyles.css";
-import './App.css';
-import React  from "react";
+import "./App.css";
+import React from "react";
 import { useState } from "react";
 // import { useNavigate, Link } from "react-router-dom";
 import {
@@ -20,12 +20,10 @@ import {
 import { products } from "./products";
 
 function App() {
-	
 	const [openSnackBar, setOpenSnackBar] = useState(false);
 
 	// pagination -- start
 	const [currentPage, setCurrentPage] = useState(1);
-	
 
 	const handleCloseSnackBar = (event, reason) => {
 		if (reason === "clickaway") {
@@ -34,11 +32,8 @@ function App() {
 		setOpenSnackBar(false);
 	};
 
-	
-
 	return (
 		<>
-		 	
 			{
 				<>
 					{/* Favicon*/}
@@ -59,25 +54,13 @@ function App() {
 					{/* <link href="css/styles.css" rel="stylesheet" />  */}
 
 					{/* Navigation*/}
+
 					<nav className="navbar navbar-expand-lg navbar-light bg-light">
-						<nav aria-label="breadcrumb"></nav>
+						{/* <nav aria-label="breadcrumb"></nav> */}
 						<div className="container px-4 px-lg-1">
-							{/* <div className="d-flex justify-content-end ">
-								<Link to={"/"}>
-									<img
-										src="/assets/img/home.png"
-										alt="home"
-										style={{
-											width: "50px",
-											height: "50px",
-										}}
-										className="img-fluid rounded hover-shadow"
-									/>
-								</Link>
-							</div> */}
-							<a className="navbar-brand" href="/">
+							{/* <a className="navbar-brand" href="/">
 								Jewelry Shop
-							</a>
+							</a> */}
 							<button
 								className="navbar-toggler"
 								type="button"
@@ -94,7 +77,7 @@ function App() {
 								id="navbarSupportedContent"
 							>
 								<ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-									<li className="nav-item">
+									{/* <li className="nav-item">
 										<a
 											className="nav-link active"
 											aria-current="page"
@@ -102,7 +85,7 @@ function App() {
 										>
 											Home
 										</a>
-									</li>
+									</li> */}
 									{/* <li className="nav-item">
 										<Link className="nav-link" to="/about">
 											About
@@ -176,19 +159,13 @@ function App() {
 								</ul>
 								{/* <SearchBar /> */}
 							</div>
-							
+
 							<ul className="navbar-nav ">
 								<li className="nav-item">
-									
-										<Button >
-											Login
-										</Button>
-								
+									<Button>Login</Button>
 								</li>
 							</ul>
-							<button
-								className="border-0 bg-transparent p-0"
-							>
+							<button className="border-0 bg-transparent p-0">
 								<img
 									src="/assets/img/orders.jpg"
 									alt="Order History"
@@ -209,7 +186,7 @@ function App() {
 				</div>
 			</div>
 		</header> */}
-					<header>
+					{/* <header>
 						<div
 							id="carouselExampleDark"
 							className="carousel carousel-dark slide"
@@ -292,8 +269,8 @@ function App() {
 								<span className="visually-hidden">Next</span>
 							</button>
 						</div>
-					</header>
-					<div
+					</header> */}
+					{/* <div
 						id="but"
 						className="d-flex justify-content-center mt-3"
 					>
@@ -304,10 +281,10 @@ function App() {
 						>
 							Learn about 25% off promotion.
 						</button>
-					</div>
+					</div> */}
 					<br />
 					<br />
-					<div
+					{/* <div
 						id="accordionContainer"
 						className="d-flex justify-content-center "
 					>
@@ -354,12 +331,12 @@ function App() {
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> */}
 					{/* Product Section */}
 					<section className="py-5">
 						<div className="container px-4 px-lg-5 mt-5">
-							<div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-								{/* product information */}
+							<div className="d-flex flex-column align-items-center">
+								<h1>test</h1>
 								{products.map((product) => (
 									<div className="col mb-5" key={product.id}>
 										<div className="card h-100">
@@ -486,6 +463,7 @@ function App() {
 										</div>
 									</div>
 								))}
+
 								{/* pop up message: success */}
 								<Snackbar
 									open={openSnackBar}
@@ -649,7 +627,7 @@ function App() {
 					<footer className="py-5 bg-dark">
 						<div className="container">
 							<p className="m-0 text-center text-white">
-								Copyright © Jewelry shop 2025
+								Copyright © Alvin Lin 2025
 							</p>
 						</div>
 					</footer>

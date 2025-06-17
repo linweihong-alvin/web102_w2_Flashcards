@@ -73,6 +73,8 @@
 	}
 }
 
+/* flip card */
+
 .flip-card {
 	perspective: 1000px;
 }
@@ -86,7 +88,8 @@
 }
 
 .flip-card:hover .flip-card-inner {
-	transform: rotateY(180deg);
+	/* transform: rotateY(180deg); 🔁 flip horizontally */
+	transform: rotateX(180deg); /* 🔁 flip vertically */
 }
 
 .flip-card-front,
@@ -106,7 +109,8 @@
 .flip-card-back {
 	background-color: #343a40;
 	color: white;
-	transform: rotateY(180deg);
+	/* transform: rotateY(180deg); 🔁 flip horizontally */
+	transform: rotateX(180deg); /* 🔁 flip vertically */
 	display: flex;
 	align-items: center;
 	justify-content: center;
