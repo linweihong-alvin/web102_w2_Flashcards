@@ -42,6 +42,8 @@ Here's a walkthrough of implemented required features:
 
 <img src='https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTdpYml4a2l5cHhkbmp0cXI4ZjV2ZzZoZjBpanFwbHhzNjA1cmFobyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ORyrMuPzYpPt5THcgZ/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+https://youtu.be/PPNev3PrLPk
+
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with "giphy"
 <!-- Recommended tools:
