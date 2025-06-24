@@ -44,11 +44,11 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+https://www.youtube.com/watch?v=5rn6kwy8RLE
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with "GIPHY"
+https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXd5dXNnbDYwdWFxemxoeDFxcWVwd2hyNGdlZmxxNWxtdjN6cWtjNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/58oj5hst0DQDVnGJmp/giphy.gif
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
