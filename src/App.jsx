@@ -28,9 +28,25 @@ function App() {
 
 	const [currentIndex, setCurrentIndex] = useState(0);
 
-	const getRandomIndex = () => {
-		const random = Math.floor(Math.random() * products.length);
-		setCurrentIndex(random);
+	const goToPreviousCard = () => {
+		setCurrentIndex((prevIndex) =>
+			// get prev state and set it the first index, else set it prev state - 1
+			prevIndex === 0 ? 0 : prevIndex - 1
+		);
+	};
+
+	const goToNextCard = () => {
+		setCurrentIndex((prevIndex) =>
+			prevIndex === products.length - 1
+				? products.length - 1
+				: prevIndex + 1
+		);
+	};
+
+	const [inputValue, setInputValue] = useState("");
+
+	const handleChange = (e) => {
+		setInputValue(e.target.value);
 	};
 
 	return (
@@ -111,7 +127,9 @@ function App() {
 								<h6>number of cards:3</h6>
 
 								{products
-									.filter((_, id) => id === currentIndex)
+									.filter(
+										(_, index) => index === currentIndex
+									)
 									.map((product) => (
 										<div
 											className="col mb-5"
@@ -172,9 +190,37 @@ function App() {
 										</div>
 									))}
 
-								<button onClick={getRandomIndex}>
-									Show Random Card
-								</button>
+								{/* user input to guess card's answer */}
+								<div>
+									<label
+										style={{ marginRight: "8px" }}
+										htmlFor="guessInput"
+									>
+										Answer Here:
+									</label>
+									<input
+										id="guessInput"
+										type="text"
+										placeholder="Type your guess..."
+										value={inputValue}
+										onChange={handleChange}
+									/>
+								</div>
+
+								<div
+									style={{
+										display: "flex",
+										alignItems: "center",
+										gap: "10px",
+									}}
+								>
+									<button onClick={goToPreviousCard}>
+										← previous card
+									</button>
+									<button onClick={goToNextCard}>
+										next card →
+									</button>
+								</div>
 							</div>
 						</div>
 					</section>

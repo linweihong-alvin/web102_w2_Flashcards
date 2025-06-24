@@ -1,6 +1,5 @@
 export const products = [
 	{
-		id: 1,
 		name: "intoxicated",
 		imagePath: "./assets/img/products/1.png",
 		description:
@@ -8,7 +7,6 @@ export const products = [
 		available: true,
 	},
 	{
-		id: 2,
 		name: "catch my breath",
 		imagePath: "./assets/img/products/2.png",
 		description:
@@ -16,7 +14,6 @@ export const products = [
 		available: true,
 	},
 	{
-		id: 3,
 		name: "by all means",
 		imagePath: "./assets/img/products/3.png",
 		description:
