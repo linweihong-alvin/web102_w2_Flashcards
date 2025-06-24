@@ -1,6 +1,7 @@
 import "./styles.css";
 import "./customStyles.css";
 import "./App.css";
+import stringSimilarity from "string-similarity";
 import React from "react";
 import { useState } from "react";
 // import { useNavigate, Link } from "react-router-dom";
@@ -20,6 +21,7 @@ import {
 import { products } from "./products";
 
 function App() {
+	const [isCorrect, setIsCorrect] = useState(); // initial undefined
 	const [isFlipped, setIsFlipped] = useState(false);
 
 	const handleClick = () => {
@@ -47,6 +49,19 @@ function App() {
 
 	const handleChange = (e) => {
 		setInputValue(e.target.value);
+	};
+
+	const handleSubmit = () => {
+		const similarity = stringSimilarity.compareTwoStrings(
+			inputValue.toLowerCase().trim(),
+			products[currentIndex].name.toLowerCase()
+		);
+
+		if (similarity >= 0.8) {
+			setIsCorrect(true);
+		} else {
+			setIsCorrect(false);
+		}
 	};
 
 	return (
@@ -162,7 +177,9 @@ function App() {
 
 															{/* Text */}
 															<h6 className="mb-0">
-																{product.name}
+																{
+																	product.description
+																}
 															</h6>
 														</div>
 														<div
@@ -179,9 +196,7 @@ function App() {
 														>
 															<h6 className="text-black px-2">
 																{" "}
-																{
-																	product.description
-																}
+																{product.name}
 															</h6>
 														</div>
 													</div>
@@ -191,10 +206,16 @@ function App() {
 									))}
 
 								{/* user input to guess card's answer */}
-								<div>
+								<div
+									style={{
+										display: "flex",
+										alignItems: "center",
+										gap: "10px",
+									}}
+								>
 									<label
-										style={{ marginRight: "8px" }}
 										htmlFor="guessInput"
+										style={{ marginRight: "8px" }}
 									>
 										Answer Here:
 									</label>
@@ -205,6 +226,9 @@ function App() {
 										value={inputValue}
 										onChange={handleChange}
 									/>
+									<button onClick={handleSubmit}>
+										Submit
+									</button>
 								</div>
 
 								<div
@@ -214,13 +238,27 @@ function App() {
 										gap: "10px",
 									}}
 								>
-									<button onClick={goToPreviousCard}>
+									<button
+										onClick={goToPreviousCard}
+										disabled={currentIndex === 0}
+									>
 										← previous card
 									</button>
-									<button onClick={goToNextCard}>
+									<button
+										onClick={goToNextCard}
+										disabled={
+											currentIndex === products.length - 1
+										}
+									>
 										next card →
 									</button>
 								</div>
+								{isCorrect === true && (
+									<p>🎉 Congratulations! Bingo!</p>
+								)}
+								{isCorrect === false && (
+									<p>❌ Oh noooo, wrong answer, try again!</p>
+								)}
 							</div>
 						</div>
 					</section>
